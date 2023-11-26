@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Generate SSH RSA key pair
+ssh-keygen -t rsa -b 4096 -C "kenzamaadan@gmail.com" -f ~/.ssh/id_rsa
+# Provide the public key
+cat ~/.ssh/id_rsa.pub > 0-RSA_public_key.pub
