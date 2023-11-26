@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Script to stop the '4-to_infinity_and_beyond' process
+# this stopped our 4-to_infinity_and_beyond process
+# by using ctrl+c in the previous task
 
-killall 4-to_infinity_and_beyond
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
