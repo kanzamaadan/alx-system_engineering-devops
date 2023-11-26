@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Script to manage the background process
+
+pid_file="/var/run/my_process.pid"
+
+start_process() {
+    echo "Starting manage_my_process"
+    ./100-process_and_pid_file &
+    echo $! > "$pid_file"
+}
+
+stop_process() {
+    echo "Stopping manage_my_process"
+    kill $(cat "$pid_file")
+    rm -f "$pid_file"
+}
+
+restart_process() {
+    stop_process
+    start_process
+}
+
+case "$1" in
+    start)
+        start_process
+        ;;
+    stop)
+        stop_process
+        ;;
+    restart)
+        restart_process
+        ;;
+    *)
+        echo "Usage: manage_my_process {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
