@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-regex = /School/
+regex = /hbt{2,5}n/
 input = ARGV[0]
 puts input.scan(regex).join('$')

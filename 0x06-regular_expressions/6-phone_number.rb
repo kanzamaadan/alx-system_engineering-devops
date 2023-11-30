@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-regex = /School/
+regex = /^\d{10}$/
 input = ARGV[0]
 puts input.scan(regex).join('$')
