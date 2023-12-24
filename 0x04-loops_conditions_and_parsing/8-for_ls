@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Display content of current directory with only part after the first dash
-
-for item in *; do
-    echo "${item#*-}"
-done
