@@ -1,0 +1,22 @@
+https://i.postimg.cc/P5drPTjg/task-1.jpg
+For every additional element, why you are adding it: Adding additional servers and a load balancer to ensure high availability, load distribution, and redundancy.
+
+What distribution algorithm your load balancer is configured with and how it works: Round Robin, which alternates requests among available servers to evenly distribute the load.
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both: Active-Active, where both servers handle requests simultaneously for load distribution and high availability; Active-Passive has one server on standby to take over if the active one fails.
+
+How a database Primary-Replica (Master-Slave) cluster works: The Primary node handles all write operations and replicates data to the Replica nodes, which handle read operations to reduce load on the Primary.
+
+What is the difference between the Primary node and the Replica node in regard to the application: The Primary node processes write operations, while the Replica nodes handle read operations to balance the load and improve performance.
+
+Issues with the Infrastructure:
+Single Point of Failure (SPOF):
+
+If the load balancer fails, the entire system is down. Redundant load balancers can mitigate this risk.
+Security Issues:
+
+No firewall: The system is vulnerable to unauthorized access.
+No HTTPS: Data transmission is not encrypted, making it susceptible to interception.
+No Monitoring:
+
+Without monitoring, it’s difficult to detect issues in real-time, affecting the reliability and performance of the infrastructure.

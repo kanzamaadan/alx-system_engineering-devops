@@ -1,0 +1,14 @@
+https://i.postimg.cc/9f8f6Ssv/task-0.jpg
+Explanation:
+Server: Central computer hosting the website's resources and services.
+Domain Name: www.foobar.com is a human-readable address that directs users to the server.
+DNS Record: A record pointing www.foobar.com to the IP address 8.8.8.8.
+Nginx: Web server handling HTTP requests and serving static content.
+Application Server: Runs the application code, processes logic, and generates dynamic content.
+Application Files: The website's codebase and assets.
+MySQL Database: Stores data required by the application.
+Communication: Uses HTTP/HTTPS and MySQL protocols for data exchange.
+Issues:
+SPOF: The single server is a vulnerability; if it fails, the website is down.
+Downtime During Maintenance: Restarting the server for updates or code deployment results in downtime.
+Scalability: Limited to the capacity of one server, unable to handle high traffic efficiently.

@@ -1,0 +1,16 @@
+https://i.postimg.cc/pV1DfcTc/task-3.jpg
+Explanation of Specifics
+For Every Additional Element, Why You Are Adding It:
+Additional Server: To enhance scalability and provide redundancy.
+Clustered Load Balancer: To ensure high availability and balanced traffic.
+Split Components: To optimize performance and simplify resource management.
+Issues with This Infrastructure
+Single Point of Failure (SPOF):
+
+Ensure each component has redundancy to avoid any single point of failure.
+Security Issues (No Firewall, No HTTPS):
+
+Implement firewalls to protect each server and enforce HTTPS for secure communication.
+No Monitoring:
+
+Set up monitoring for all servers to track performance and detect issues promptly.

@@ -1,0 +1,34 @@
+https://i.postimg.cc/yNzhJJdV/task-2.jpg
+Explanation of Specific Elements
+Why Adding Each Element:
+
+Firewalls: Enhance security by controlling traffic between different parts of the infrastructure.
+SSL Certificate: Serve encrypted traffic to protect data in transit.
+Monitoring Clients: Enable tracking and analysis of server performance and health.
+What Are Firewalls For:
+
+Purpose: To block unauthorized access while permitting authorized communication.
+Why Serve Traffic Over HTTPS:
+
+Purpose: Encrypts data to prevent eavesdropping, tampering, and man-in-the-middle attacks.
+What Monitoring Is Used For:
+
+Purpose: To track server performance, detect anomalies, and ensure the infrastructure runs smoothly.
+How the Monitoring Tool Collects Data:
+
+Method: Monitoring clients gather data on metrics like CPU usage, memory usage, disk I/O, and network traffic and send it to a centralized monitoring service.
+Monitoring Web Server QPS (Queries Per Second):
+
+Steps:
+Configure the monitoring client to track and report the number of HTTP requests per second.
+Set up alerts and dashboards in the monitoring service to visualize QPS and detect anomalies.
+Issues with This Infrastructure
+Why Terminating SSL at the Load Balancer Level is an Issue:
+
+Reason: SSL termination at the load balancer means internal traffic between the load balancer and web servers is unencrypted, which can be a security risk.
+Why Having Only One MySQL Server Capable of Accepting Writes is an Issue:
+
+Reason: It creates a single point of failure (SPOF) for write operations, leading to potential downtime if the primary server fails.
+Why Having Servers with All the Same Components Might be a Problem:
+
+Reason: Increases complexity and resource contention, making it harder to scale and maintain the infrastructure. Specialized roles (separate web, application, and database servers) are 
